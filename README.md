@@ -1,4 +1,4 @@
-# KahootClone — Real-Time Quiz App
+Real-Time Quiz App
 
 A production-grade, real-time quiz application similar to Kahoot, built with Go (backend) and React + TypeScript (frontend). Designed for AWS serverless deployment (Lambda, DynamoDB, ElastiCache, Cognito) with a unified local development server.
 
