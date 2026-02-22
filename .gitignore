@@ -1,0 +1,34 @@
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+frontend/dist/
+
+# Go
+backend/bin/
+*.exe
+bootstrap
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+/tmp/
+
+# Terraform / CDK
+.terraform/
+cdk.out/

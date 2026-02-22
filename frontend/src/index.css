@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --kahoot-purple: #46178f;
+  --kahoot-red: #e21b3c;
+  --kahoot-blue: #1368ce;
+  --kahoot-yellow: #d89e00;
+  --kahoot-green: #26890c;
+  --bg-dark: #0c0c0c;
+  --bg-gray: #1a1a2e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--bg-dark);
+  color: #ffffff;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Outfit", sans-serif;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-gray);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--kahoot-purple);
+  border-radius: 3px;
+}
+
+/* Background gradient mesh */
+.bg-mesh {
+  background:
+    radial-gradient(at 30% 20%, rgba(70, 23, 143, 0.15) 0px, transparent 50%),
+    radial-gradient(at 80% 80%, rgba(19, 104, 206, 0.1) 0px, transparent 50%),
+    var(--bg-dark);
+}
+
+/* Glassmorphism card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+}
+
+/* Button base styles */
+.btn-primary {
+  @apply px-6 py-3 rounded-xl font-semibold text-white transition-all duration-200;
+  background: linear-gradient(135deg, var(--kahoot-purple), #6c3ce0);
+  box-shadow: 0 4px 15px rgba(70, 23, 143, 0.3);
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(70, 23, 143, 0.5);
+}
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Answer buttons */
+.answer-btn {
+  @apply w-full p-6 rounded-2xl font-bold text-xl text-white transition-all duration-150 cursor-pointer;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.3);
+}
+.answer-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.3);
+}
+.answer-btn.red {
+  background: var(--kahoot-red);
+}
+.answer-btn.blue {
+  background: var(--kahoot-blue);
+}
+.answer-btn.yellow {
+  background: var(--kahoot-yellow);
+}
+.answer-btn.green {
+  background: var(--kahoot-green);
+}
+.answer-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* PIN display */
+.pin-display {
+  font-family: "Outfit", sans-serif;
+  font-weight: 800;
+  font-size: 4rem;
+  letter-spacing: 0.3em;
+  color: white;
+  text-shadow: 0 0 20px rgba(70, 23, 143, 0.5);
+}
+
+/* Input styling */
+.input-field {
+  @apply w-full px-4 py-3 rounded-xl border border-white/10 bg-white/5 text-white placeholder-white/40 outline-none transition-all duration-200;
+}
+.input-field:focus {
+  border-color: var(--kahoot-purple);
+  box-shadow: 0 0 0 3px rgba(70, 23, 143, 0.2);
+}
+
+/* Leaderboard */
+.leaderboard-row {
+  @apply flex items-center justify-between p-4 rounded-xl transition-all duration-300;
+  background: rgba(255, 255, 255, 0.03);
+}
+.leaderboard-row:nth-child(1) {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 215, 0, 0.15),
+    rgba(255, 215, 0, 0.05)
+  );
+  border: 1px solid rgba(255, 215, 0, 0.2);
+}
+.leaderboard-row:nth-child(2) {
+  background: linear-gradient(
+    135deg,
+    rgba(192, 192, 192, 0.1),
+    rgba(192, 192, 192, 0.03)
+  );
+  border: 1px solid rgba(192, 192, 192, 0.15);
+}
+.leaderboard-row:nth-child(3) {
+  background: linear-gradient(
+    135deg,
+    rgba(205, 127, 50, 0.1),
+    rgba(205, 127, 50, 0.03)
+  );
+  border: 1px solid rgba(205, 127, 50, 0.15);
+}
